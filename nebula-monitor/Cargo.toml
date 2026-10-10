@@ -1,0 +1,16 @@
+[package]
+name = "nebula-monitor"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+nebula-core.workspace = true
+nebula-panels.workspace = true
+chrono.workspace = true
+clap.workspace = true
+crossterm.workspace = true
+nvml-wrapper.workspace = true
+ratatui.workspace = true
+serde.workspace = true
+sysinfo.workspace = true
+toml.workspace = true

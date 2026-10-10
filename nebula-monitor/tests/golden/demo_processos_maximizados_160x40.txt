@@ -1,0 +1,40 @@
+NEBULA-MONITOR v0.1.0  |  hostname: nebula-station  |  distro:  Arch Cyberdeck  |  kernel: 6.12  |  uptime: 14d 6h 32m   ⚡  AC  🔋  100%  [██████████] Completa 
+╭  PROCESSOS (Top) ────────────────────────────────────────────────────────────────────────────────────────────────────────────────── CPU   MEM   GPU   IO  ──╮
+│#   PID     USER     %CPU     %MEM    %GPU    COMMAND                                                                                                         │
+│1   1420    operator 142.0    12.5    54.0    ollama-server (qwen3.5-32b)                                                                                     │
+│2   3891    operator 68.5     8.2     0.0     rust-analyzer --workspace                                                                                       │
+│3   2104    operator 28.0     6.4     4.5     firefox --isolated-process                                                                                      │
+│4   4890    operator 14.5     2.1     0.0     cargo build --release                                                                                           │
+│5   1892    operator 8.2      1.8     3.2     alacritty (neovim)                                                                                              │
+│6   982     system   4.8      1.2     0.0     dockerd /containerd                                                                                             │
+│7   1120    system   2.1      0.9     0.0     pipewire-pulse                                                                                                  │
+│8   745     system   1.5      0.8     0.0     systemd-journald                                                                                                │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+│                                                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ [h] Ajuda | [Tab] Ordenar | [↑↓] Navegar | [c] Comando | [/] Filtrar | [k] Encerrar | [g] GPU VRAM/Core | [z] Restaurar | [i] Ícones | [p] Pausar | [q] Sair   

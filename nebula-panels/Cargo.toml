@@ -1,0 +1,8 @@
+[package]
+name = "nebula-panels"
+version.workspace = true
+edition.workspace = true
+description = "Painéis nativos do nebula-monitor (usam só a API pública do nebula-core)"
+
+[dependencies]
+nebula-core.workspace = true

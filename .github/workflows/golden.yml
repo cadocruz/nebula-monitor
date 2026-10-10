@@ -1,0 +1,53 @@
+name: Regerar referências de tela
+
+# Roda só em branches golden/...: regera as referências de tela (tests/golden) e faz
+# commit delas na própria branch, para revisão do diff antes de levar para a main.
+on:
+  push:
+    branches: ["golden/**"]
+
+permissions:
+  contents: write
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  regerar:
+    name: Regerar referências (Linux)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - uses: Swatinem/rust-cache@v2
+
+      # O ci.yml não roda nas golden/**: formatação e clippy são verificados aqui
+      - name: Formatação
+        run: cargo fmt --check
+
+      - name: Clippy
+        run: cargo clippy --all-targets --locked -- -D warnings
+
+      - name: Regerar
+        run: UPDATE_GOLDEN=1 cargo test --locked -p nebula-monitor golden
+
+      # Com as referências novas no lugar, roda tudo: uma falha fora das referências
+      # aparece aqui, na branch, antes da revisão (e nada é commitado)
+      - name: Testes completos
+        run: cargo test --locked
+
+      - name: Commit das referências
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nebula-monitor/tests/golden
+          if git diff --cached --quiet; then
+            echo "Referências já estavam atualizadas."
+          else
+            git commit -m "test: regerar referências de tela (automático)"
+            git push
+          fi

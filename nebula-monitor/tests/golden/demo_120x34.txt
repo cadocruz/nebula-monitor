@@ -1,0 +1,34 @@
+NEBULA-MONITOR v0.1.0  |  hostname: nebula-station  |  distro:  Arch Cyberdeck   ⚡  AC  🔋  100%  [██████████] Completa 
+╭  CPU AMD Ryzen 9 7950X (16 c…─4.8 GHz | T: 46°C | 125.0 W ╮╭  MEMÓRIA 64 GB DDR5 6000 MHz   ───────────────────────╮
+│                    Core 0   48%  ████░░░░░ 4.8 GHz   42°C* ││Usada   24.6 GB   █████░░░░░░░░░  38%   Histórico (uso de
+│                    Core 1   62%  ██████░░░ 5.1 GHz   42°C* ││Livre   28.0 GB   ██████░░░░░░░░  44%    64G ┌┄┄┄┄┄┬┄┄┄┐│
+│                    Core 2   35%  ███░░░░░░ 4.6 GHz   42°C* ││Cache   10.0 GB   ██░░░░░░░░░░░░  16%        │     ┆   ││
+│                    Core 3   84%  ████████░ 5.3 GHz   42°C* ││Buffers  1.0 GB   ░░░░░░░░░░░░░░   2%        │███▇▇▇▇▇▆││
+│                    Core 4   22%  ██░░░░░░░ 4.4 GHz   42°C* ││                                         32G ├█████████┤│
+│                    100% ┌┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┐││Swap  0.8 / 32.0 GB (2%)░░░░░░░░░░░░         │█████████││
+│Load Average (1m / 5│ / 1│     ┆    ⢀⣀⣀⣀⡀  ┆     ┆     ┆   │││                                          0G └┄┄┄┄┄┴┄┄┄┘│
+│ 1.45  |  1.22  |  0│    │⠒⠋⠑⠒⠒⠲⠔⠒⠒⠋⠁┆  ⠈⠑⢢⣀     ┆  ⢀⡀ ┆   ││╰────────────────────────────────────────────────────────╯
+│                    │    │     ┆     ┆     ⠈⠙⠒⠢⠔⠒⠒⠋⠉⠁⠈⠉⠙⠒⠒⠒││╭  GPU NVIDIA GeForce RTX 40…─PCIe 4.0 x16 | TDP: 450 W ╮
+│                      0% └┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┘││      ⣠⣴⣶⣶⣶⣶⣦⣄      VRAM         13.8 / 22.9 GB (60%)   │
+│Top CPU Processes                                           ││    ⣠⣾⠟⠉    ⠉⠻⣷⣄    Temperatura  ████░░░░  52°C         │
+│#    PID       USER     %CPU     %MEM     COMMAND           ││   ⢰    68%    ⣿⡆   Potência     ████░░░░  215 W / 450 W│
+│1    1420      operator 142.0    12.5     ollama-server (qwe││   ⢸ GPU Usage ⣿⡇   Clock (Core) ███████░  2.520 GHz    │
+│2    3891      operator 68.5     8.2      rust-analyzer --wo││   ⠸ VRAM: 60% ⣿⠇   Clock (Mem)  ██████░░  10.500 GHz   │
+│3    2104      operator 28.0     6.4      firefox --isolated││    ⠙⢿⣦⣀    ⣀⣴⡿⠋    Fan Speed    ███░░░░░  42% (1380 RPM│
+│4    4890      operator 14.5     2.1      cargo build --rele││      ⠙⠻⠿⠿⠿⠿⠟⠋                                          │
+╰────────────────────────────────────────────────────────────╯╰────────────────────────────────────────────────────────╯
+╭  DISCOS E ARMAZENAMENTO■ Leitura   ■ Gravação   ■ Latência (ms) ────╮╭  PROCESSOS (Top) ───────────────────────────╮
+│ DISPOSITIVO    MONTAGEM         USO           ESPAÇO LIVRE           ││#   PID   USER   %CPU  %MEM   %GPU  COMMAND   │
+│ /dev/nvme0n1   /                 48%  ██░░░   1.0 TB / 2.0 TB        ││1   1420  operat 142.0 12.5   54.0  ollama-ser│
+│   Samsung SSD 990 PRO 2TB               · 36°C                       ││2   3891  operat 68.5  8.2    0.0   rust-analy│
+│ /dev/nvme1n1   /mnt/data         64%  ███░░   1.4 TB / 3.9 TB        ││3   2104  operat 28.0  6.4    4.5   firefox --│
+│   WD_BLACK SN850X 4TB                   · 41°C                       ││4   4890  operat 14.5  2.1    0.0   cargo buil│
+│ /dev/sda       —                — sem volume montado                 ││5   1892  operat 8.2   1.8    3.2   alacritty │
+│   Crucial MX500 1TB                     · 29°C                       ││6   982   system 4.8   1.2    0.0   dockerd /c│
+│                                                                      ││7   1120  system 2.1   0.9    0.0   pipewire-p│
+│                                                                      ││8   745   system 1.5   0.8    0.0   systemd-jo│
+│                                                                      ││                                              │
+│                                                                      ││                                              │
+│                                                                      ││                                              │
+╰──────────────────────────────────────────────────────────────────────╯╰──────────────────────────────────────────────╯
+ [h] Ajuda | [Tab] Ordenar | [↑↓] Navegar | [c] Comando | [/] Filtrar | [k] Encerrar | [g] GPU VRAM/Core | [i] Ícones | 

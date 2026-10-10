@@ -1,0 +1,18 @@
+# Tema âmbar, no estilo dos monitores de fósforo antigos.
+# Uso: nebula-monitor --config examples/configs/amber-theme.toml
+#
+# Cada chave troca uma cor da paleta neon em toda a tela; as ausentes ficam como estão.
+
+[theme]
+background = "#100b05"   # fundo
+text = "#ffd9a0"         # texto principal
+text_dim = "#9c7a4a"     # rótulos e texto secundário
+border = "#cc8a00"       # molduras dos painéis
+bar_empty = "#2a1d0c"    # parte vazia das barras
+cyan = "#ffb000"         # destaque principal
+cyan_dim = "#7a5200"     # separadores
+green = "#ffcc66"        # uso baixo, valores bons
+yellow = "#fff3c4"       # uso médio, moldura do painel focado
+red = "#ff4d2e"          # uso alto, alertas
+magenta = "#ff8c1a"      # memória, gravação, envio
+blue = "#d9a441"         # cache

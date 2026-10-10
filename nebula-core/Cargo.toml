@@ -1,0 +1,11 @@
+[package]
+name = "nebula-core"
+version.workspace = true
+edition.workspace = true
+description = "SDK do nebula-monitor: contrato Panel, tema neon e widgets compartilhados"
+
+[dependencies]
+crossterm.workspace = true
+nvml-wrapper.workspace = true
+ratatui.workspace = true
+sysinfo.workspace = true

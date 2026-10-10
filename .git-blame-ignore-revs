@@ -1,0 +1,5 @@
+# Commits só de formatação, ignorados pelo git blame e pelo GitHub.
+# Uso local: git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# style: aplicar cargo fmt em todo o código
+9cfa76ffd97ccbb02cc938f9d3b135d82ea6cdec

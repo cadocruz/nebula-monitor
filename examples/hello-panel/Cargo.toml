@@ -1,0 +1,10 @@
+[package]
+name = "hello-panel"
+version.workspace = true
+edition.workspace = true
+publish = false
+description = "Exemplo: binário pessoal do nebula-monitor com um painel próprio"
+
+[dependencies]
+nebula-core.workspace = true
+nebula-monitor.workspace = true

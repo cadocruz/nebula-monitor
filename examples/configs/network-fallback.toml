@@ -1,0 +1,19 @@
+# Exemplo: a Rede ocupa a vaga da GPU quando não há placa NVIDIA.
+#   nebula-monitor --config examples/configs/network-fallback.toml
+#   nebula-monitor --demo --config examples/configs/network-fallback.toml
+[layout]
+split = "rows"
+sizes = [55, 45]
+children = [
+  { split = "cols", sizes = [52, 48], children = [
+      { panels = ["cpu"] },
+      { split = "rows", sizes = [50, 50], children = [
+          { panels = ["memory"] },
+          { panels = ["gpu", "network"] },
+      ]},
+  ]},
+  { split = "cols", sizes = [60, 40], children = [
+      { panels = ["disks"] },
+      { panels = ["processes"] },
+  ]},
+]

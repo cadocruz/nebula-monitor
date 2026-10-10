@@ -1,0 +1,40 @@
+NEBULA-MONITOR v0.1.0  |  hostname: nebula-station  |  distro:  Arch Cyberdeck  |  kernel: 6.12  |  uptime: 14d 6h 32m   ⚡  AC  🔋  100%  [██████████] Completa 
+╭  CPU AMD Ryzen 9 7950X (16 cores / 32 threads) (1…─4.8 GHz | T: 46°C | 125.0 W ╮╭  MEMÓRIA 64 GB DDR5 6000 MHz   ───────────────Uso: 38% | 24.6 / 64.0 GB ─╮
+│          ⢀⣠⣴⣶⣶⣶⣶⣦⣄⡀          Core 0   48%  ██████░░░░░░  ⣀⡠⠤⠤⠤  4.8 GHz   42°C* ││Usada   24.6 GB   █████░░░░░░░░░  38%   Histórico (uso de RAM)             │
+│        ⢀⣴⡿⠛⠉    ⠉⠛⢿⣦⡀        Core 1   62%  ███████░░░░░  ⠤⠤⠤⠤⠤  5.1 GHz   42°C* ││Livre   28.0 GB   ██████░░░░░░░░  44%    64G ┌┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┐│
+│       ⢀⣾⡟          ⢻⣷⡀       Core 2   35%  ████░░░░░░░░  ⣀⣀⣀⠤⣀  4.6 GHz   42°C* ││Cache   10.0 GB   ██░░░░░░░░░░░░  16%        │     ┆     ┆     ┆     ┆    ││
+│       ⢸⣿    48%     ⣿⡇       Core 3   84%  ██████████░░  ⠔⠒⠒⠒⠒  5.3 GHz   42°C* ││Buffers  1.0 GB   ░░░░░░░░░░░░░░   2%        │  ▂▂▂▃▃▃▃▃▄▄▄▄▄▄▄▄▄▄▄▃▃▃▃▂▂▂││
+│       ⢸⣿ CPU Usage  ⣿⡇       Core 4   22%  ███░░░░░░░░░  ⢀⣀⣀⣀⣀  4.4 GHz   42°C* ││                                             │████████████████████████████││
+│       ⠈⢿⣧          ⣼⡿⠁       Core 5   55%  ███████░░░░░  ⠤⠤⠤⠤⠤  4.9 GHz   42°C* ││Swap  0.8 / 32.0 GB (2%)░░░░░░░░░░░░     32G ├████████████████████████████┤│
+│        ⠈⠻⣷⣤⣀    ⣀⣤⣾⠟⠁        Core 6   71%  █████████░░░  ⠤⠤⠒⠒⠒  5.2 GHz   42°C* ││                                             │████████████████████████████││
+│          ⠈⠙⠻⠿⠿⠿⠿⠟⠋⠁          Core 7   39%  █████░░░░░░░  ⣀⡠⠤⠤⠤  4.7 GHz   42°C* ││                                             │████████████████████████████││
+│                              100% ┌┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┄┄┄┬┄┄┐││                                          0G └┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┘│
+│Load Average (1m / 5m / 15m)  │    │     ┆     ┆  ⣀⣀⣀⣀⣀⡀   ┆     ┆     ┆     ┆  ││╰───────────────────────────────────────────────────────────────────────────╯
+│ 1.45  |  1.22  |  0.98  |    │    │⠒⠋⠉⠑⠒⠒⠒⠲⠔⠒⠒⠒⠋⠉⠁  ┆ ⠈⠑⠲⢤⣀     ┆     ⣀⡀    ┆  ││╭  GPU NVIDIA GeForce RTX 4090 24GB (Driver 570…─PCIe 4.0 x16 | TDP: 450 W ╮
+│                              │    │     ┆     ┆     ┆     ⠈⠙⠒⠒⠢⠤⠖⠒⠒⠋⠉⠉⠁⠈⠉⠉⠙⠒⠒⠒⠒│││     ⢀⣠⣴⣶⣶⣶⣶⣦⣄⡀     VRAM         13.8 / 22.9 GB (60%)     Uso da GPU (histó│
+│                                0% └┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┄┄┄┴┄┄┘││   ⢀⣴⡿⠛⠉    ⠉⠛⢿⣦⡀   Temperatura  ████░░░░  52°C           100% ┌┄┄┄┄┄┬┄┄┄┄┐│
+│Top CPU Processes                                                                ││  ⢀⣾⡟          ⢻⣷⡀  Potência     ████░░░░  215 W / 450 W(4     │     ┆    ││
+│#    PID       USER     %CPU     %MEM     COMMAND                                ││  ⢸⣿    68%     ⣿⡇  Clock (Core) ███████░  2.520 GHz           │     ┆    ││
+│1    1420      operator 142.0    12.5     ollama-server (qwen3.5-32b)            ││  ⢸⣿ GPU Usage  ⣿⡇  Clock (Mem)  ██████░░  10.500 GHz      50% ├▃▃▃▄▄▄▅▅▆▆┤│
+│2    3891      operator 68.5     8.2      rust-analyzer --workspace              ││  ⠈⢿ VRAM: 60% ⣼⡿⠁  Fan Speed    ███░░░░░  42% (1380 RPM)      │██████████││
+│3    2104      operator 28.0     6.4      firefox --isolated-process             ││   ⠈⠻⣷⣤⣀    ⣀⣤⣾⠟⠁                                              │██████████││
+│4    4890      operator 14.5     2.1      cargo build --release                  ││     ⠈⠙⠻⠿⠿⠿⠿⠟⠋⠁                                             0% └┄┄┄┄┄┴┄┄┄┄┘│
+╰─────────────────────────────────────────────────────────────────────────────────╯╰───────────────────────────────────────────────────────────────────────────╯
+╭  DISCOS E ARMAZENAMENTO ───────────────────────■ Leitura   ■ Gravação   ■ Latência (ms) ────╮╭  PROCESSOS (Top) ────────────────── CPU   MEM   GPU   IO  ──╮
+│ DISPOSITIVO    MONTAGEM         USO           ESPAÇO LIVRE     R/W (MB/s)  IOPS  LAT ms      ││#   PID     USER     %CPU     %MEM    %GPU    COMMAND         │
+│ /dev/nvme0n1   /                 48%  ██░░░   1.0 TB / 2.0 TB  142.5 / 38  5.4K  0.32        ││1   1420    operator 142.0    12.5    54.0    ollama-server (q│
+│   Samsung SSD 990 PRO 2TB               · 36°C                                               ││2   3891    operator 68.5     8.2     0.0     rust-analyzer --│
+│ /dev/nvme1n1   /mnt/data         64%  ███░░   1.4 TB / 3.9 TB  85.0 / 195  7.8K  0.45        ││3   2104    operator 28.0     6.4     4.5     firefox --isolat│
+│   WD_BLACK SN850X 4TB                   · 41°C                                               ││4   4890    operator 14.5     2.1     0.0     cargo build --re│
+│ /dev/sda       —                — sem volume montado           —           —     —           ││5   1892    operator 8.2      1.8     3.2     alacritty (neovi│
+│   Crucial MX500 1TB                     · 29°C                                               ││6   982     system   4.8      1.2     0.0     dockerd /contain│
+│                                                                                              ││7   1120    system   2.1      0.9     0.0     pipewire-pulse  │
+│                                                                                              ││8   745     system   1.5      0.8     0.0     systemd-journald│
+│                                                                                              ││                                                              │
+│                                                                                              ││                                                              │
+│                                                                                              ││                                                              │
+│                                                                                              ││                                                              │
+│                                                                                              ││                                                              │
+│                                                                                              ││                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯╰──────────────────────────────────────────────────────────────╯
+ [h] Ajuda | [Tab] Ordenar | [↑↓] Navegar | [c] Comando | [/] Filtrar | [k] Encerrar | [g] GPU VRAM/Core | [i] Ícones | [p] Pausar | [q] Sair    ⏸ PAUSADO [p]  

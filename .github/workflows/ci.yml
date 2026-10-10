@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  # qualquer branch: features são validadas antes de chegar à main. As golden/** ficam
+  # de fora: o golden.yml já roda todos os testes antes de commitar as referências
+  push:
+    branches-ignore: ["golden/**"]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  linux:
+    name: Build e testes (Linux)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Formatação
+        run: cargo fmt --check
+
+      - name: Build
+        run: cargo build --locked
+
+      - name: Testes
+        run: cargo test --locked
+
+      - name: Clippy
+        run: cargo clippy --all-targets --locked -- -D warnings
+
+      - name: Build release
+        run: cargo build --release --locked
+
+      - name: Smoke test do binário (modo demo)
+        run: ./target/release/nebula-monitor --demo --dump 160 40 | grep -q "NEBULA-MONITOR"

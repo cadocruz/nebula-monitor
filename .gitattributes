@@ -1,0 +1,2 @@
+# Referências de tela: comparadas byte a byte nos testes; LF em qualquer sistema
+nebula-monitor/tests/golden/** text eol=lf
