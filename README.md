@@ -114,8 +114,6 @@ primary_accent = "#ffb000"
 | `secondary_accent` | `#e040fb` | Memória, gravação, envio |
 | `cache_usage` | `#2979ff` | Cache na memória |
 
-As chaves antigas com nomes de cores não são aceitas. Atualize arquivos `config.toml`
-existentes para usar os nomes da tabela.
 
 Os tons derivados (degradês dos gráficos e linhas de grade) continuam os da paleta neon.
 Exemplo completo: [`examples/configs/amber-theme.toml`](examples/configs/amber-theme.toml).
