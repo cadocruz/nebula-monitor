@@ -5,7 +5,7 @@
 //!
 //! [theme]                   # opcional; cada chave troca uma cor da paleta neon
 //! background = "#100b05"
-//! cyan = "#ffb000"
+//! primary_accent = "#ffb000"
 //!
 //! [layout]
 //! split = "rows"            # "rows" (empilha) ou "cols" (lado a lado)
@@ -347,13 +347,20 @@ mod tests {
 
     #[test]
     fn tema_troca_so_as_cores_informadas() {
-        let cfg = parse("[theme]\ncyan = \"#ffb000\"\nbackground = \"#100B05\"", IDS).unwrap();
-        assert_eq!(cfg.palette.cyan, ratatui::style::Color::Rgb(255, 176, 0));
+        let cfg = parse(
+            "[theme]\nprimary_accent = \"#ffb000\"\nbackground = \"#100B05\"",
+            IDS,
+        )
+        .unwrap();
+        assert_eq!(
+            cfg.palette.primary_accent,
+            ratatui::style::Color::Rgb(255, 176, 0)
+        );
         assert_eq!(
             cfg.palette.background,
             ratatui::style::Color::Rgb(16, 11, 5)
         );
-        assert_eq!(cfg.palette.magenta, Palette::NEON.magenta);
+        assert_eq!(cfg.palette.secondary_accent, Palette::NEON.secondary_accent);
         assert_eq!(cfg.layout, Node::default_layout());
         assert_eq!(parse("", IDS).unwrap().palette, Palette::NEON);
     }
@@ -362,12 +369,36 @@ mod tests {
     fn tema_com_chave_ou_cor_invalida_e_rejeitado() {
         let e = parse("[theme]\nciano = \"#ffb000\"", IDS).unwrap_err();
         assert!(
-            e.contains("theme.ciano") && e.contains("background, text"),
+            e.contains("theme.ciano") && e.contains("background, text_primary"),
             "{e}"
         );
-        let e = parse("[theme]\ncyan = \"laranja\"", IDS).unwrap_err();
-        assert!(e.contains("theme.cyan") && e.contains("#rrggbb"), "{e}");
-        assert!(parse("[theme]\ncyan = 255", IDS).is_err());
+        let e = parse("[theme]\nprimary_accent = \"laranja\"", IDS).unwrap_err();
+        assert!(
+            e.contains("theme.primary_accent") && e.contains("#rrggbb"),
+            "{e}"
+        );
+        assert!(parse("[theme]\nprimary_accent = 255", IDS).is_err());
+    }
+
+    #[test]
+    fn nomes_antigos_do_tema_sao_rejeitados() {
+        for chave in [
+            "text",
+            "text_dim",
+            "border",
+            "bar_empty",
+            "cyan",
+            "cyan_dim",
+            "green",
+            "yellow",
+            "red",
+            "magenta",
+            "blue",
+        ] {
+            let entrada = format!("[theme]\n{chave} = \"#123456\"");
+            let erro = parse(&entrada, IDS).unwrap_err();
+            assert!(erro.contains(&format!("theme.{chave}")), "{erro}");
+        }
     }
 
     #[test]

@@ -19,68 +19,68 @@ use ratatui::style::Color;
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Palette {
     pub background: Color,
-    pub text: Color,
-    pub text_dim: Color,
-    pub border: Color,
-    pub bar_empty: Color,
-    pub cyan: Color,
-    pub cyan_dim: Color,
-    pub green: Color,
-    pub yellow: Color,
-    pub red: Color,
-    pub magenta: Color,
-    pub blue: Color,
+    pub text_primary: Color,
+    pub text_secondary: Color,
+    pub panel_border: Color,
+    pub bar_track: Color,
+    pub primary_accent: Color,
+    pub separator: Color,
+    pub status_good: Color,
+    pub status_warning: Color,
+    pub status_critical: Color,
+    pub secondary_accent: Color,
+    pub cache_usage: Color,
 }
 
 impl Palette {
     /// A paleta neon de sempre (a de `nebula_core::theme`)
     pub const NEON: Palette = Palette {
         background: BG_DARK,
-        text: TEXT_WHITE,
-        text_dim: TEXT_DIM,
-        border: BORDER_COLOR,
-        bar_empty: BAR_EMPTY,
-        cyan: CYAN_NEON,
-        cyan_dim: CYAN_DIM,
-        green: GREEN_NEON,
-        yellow: YELLOW_NEON,
-        red: RED_ALERT,
-        magenta: MAGENTA_NEON,
-        blue: BLUE_NEON,
+        text_primary: TEXT_WHITE,
+        text_secondary: TEXT_DIM,
+        panel_border: BORDER_COLOR,
+        bar_track: BAR_EMPTY,
+        primary_accent: CYAN_NEON,
+        separator: CYAN_DIM,
+        status_good: GREEN_NEON,
+        status_warning: YELLOW_NEON,
+        status_critical: RED_ALERT,
+        secondary_accent: MAGENTA_NEON,
+        cache_usage: BLUE_NEON,
     };
 
     /// Cada cor com o nome da chave, na ordem da documentação
     pub fn entries_mut(&mut self) -> [(&'static str, &mut Color); 12] {
         [
             ("background", &mut self.background),
-            ("text", &mut self.text),
-            ("text_dim", &mut self.text_dim),
-            ("border", &mut self.border),
-            ("bar_empty", &mut self.bar_empty),
-            ("cyan", &mut self.cyan),
-            ("cyan_dim", &mut self.cyan_dim),
-            ("green", &mut self.green),
-            ("yellow", &mut self.yellow),
-            ("red", &mut self.red),
-            ("magenta", &mut self.magenta),
-            ("blue", &mut self.blue),
+            ("text_primary", &mut self.text_primary),
+            ("text_secondary", &mut self.text_secondary),
+            ("panel_border", &mut self.panel_border),
+            ("bar_track", &mut self.bar_track),
+            ("primary_accent", &mut self.primary_accent),
+            ("separator", &mut self.separator),
+            ("status_good", &mut self.status_good),
+            ("status_warning", &mut self.status_warning),
+            ("status_critical", &mut self.status_critical),
+            ("secondary_accent", &mut self.secondary_accent),
+            ("cache_usage", &mut self.cache_usage),
         ]
     }
 
     fn colors(&self) -> [Color; 12] {
         [
             self.background,
-            self.text,
-            self.text_dim,
-            self.border,
-            self.bar_empty,
-            self.cyan,
-            self.cyan_dim,
-            self.green,
-            self.yellow,
-            self.red,
-            self.magenta,
-            self.blue,
+            self.text_primary,
+            self.text_secondary,
+            self.panel_border,
+            self.bar_track,
+            self.primary_accent,
+            self.separator,
+            self.status_good,
+            self.status_warning,
+            self.status_critical,
+            self.secondary_accent,
+            self.cache_usage,
         ]
     }
 
@@ -144,7 +144,7 @@ mod tests {
         buf[(2, 0)].set_fg(Color::Rgb(1, 2, 3)).set_bg(Color::Black);
 
         let tema = Palette {
-            cyan: Color::Rgb(255, 176, 0),
+            primary_accent: Color::Rgb(255, 176, 0),
             background: Color::Rgb(16, 11, 5),
             ..Palette::NEON
         };
@@ -163,8 +163,8 @@ mod tests {
         buf[(0, 0)].set_fg(CYAN_NEON);
         buf[(1, 0)].set_fg(MAGENTA_NEON);
         Palette {
-            cyan: MAGENTA_NEON,
-            magenta: CYAN_NEON,
+            primary_accent: MAGENTA_NEON,
+            secondary_accent: CYAN_NEON,
             ..Palette::NEON
         }
         .apply(&mut buf);

@@ -63,7 +63,7 @@ ou em qualquer caminho via `--config <arquivo>`.
 refresh_ms = 1000         # intervalo entre coletas, em ms (200 a 60000; padrão 1000)
 
 [theme]                   # opcional: cores (veja "Tema" abaixo)
-cyan = "#ffb000"
+primary_accent = "#ffb000"
 
 [layout]
 split = "rows"            # "rows" empilha, "cols" põe lado a lado
@@ -96,23 +96,26 @@ As chaves ausentes ficam com a cor padrão.
 ```toml
 [theme]
 background = "#100b05"
-cyan = "#ffb000"
+primary_accent = "#ffb000"
 ```
 
 | Chave | Padrão | Onde aparece |
 | :--- | :--- | :--- |
 | `background` | `#070b12` | Fundo |
-| `text` | `#ebf3fa` | Texto principal |
-| `text_dim` | `#5f7d91` | Rótulos e texto secundário |
-| `border` | `#00d2f0` | Molduras dos painéis |
-| `bar_empty` | `#1c2836` | Parte vazia das barras |
-| `cyan` | `#00e5ff` | Destaque principal, leitura, recebimento |
-| `cyan_dim` | `#146e8c` | Separadores, Buffers na Memória |
-| `green` | `#00e676` | Uso baixo, valores bons |
-| `yellow` | `#ffd600` | Uso médio, moldura do painel focado |
-| `red` | `#ff1744` | Uso alto, alertas |
-| `magenta` | `#e040fb` | Memória, gravação, envio |
-| `blue` | `#2979ff` | Cache na Memória |
+| `text_primary` | `#ebf3fa` | Texto principal |
+| `text_secondary` | `#5f7d91` | Rótulos e texto secundário |
+| `panel_border` | `#00d2f0` | Molduras dos painéis |
+| `bar_track` | `#1c2836` | Parte vazia das barras |
+| `primary_accent` | `#00e5ff` | Destaque principal, leitura, recebimento |
+| `separator` | `#146e8c` | Separadores, buffers na memória |
+| `status_good` | `#00e676` | Uso baixo, valores bons |
+| `status_warning` | `#ffd600` | Uso médio, moldura do painel focado |
+| `status_critical` | `#ff1744` | Uso alto, alertas |
+| `secondary_accent` | `#e040fb` | Memória, gravação, envio |
+| `cache_usage` | `#2979ff` | Cache na memória |
+
+As chaves antigas com nomes de cores não são aceitas. Atualize arquivos `config.toml`
+existentes para usar os nomes da tabela.
 
 Os tons derivados (degradês dos gráficos e linhas de grade) continuam os da paleta neon.
 Exemplo completo: [`examples/configs/amber-theme.toml`](examples/configs/amber-theme.toml).
